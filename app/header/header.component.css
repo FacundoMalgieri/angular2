@@ -1,5 +1,5 @@
 #header-comp {
-    min-height: 400px; 
+    min-height: 300px; 
     height: 100%; 
     background-color: #CCC; 
     background: url(./app/assets/images/bg.jpg) no-repeat center center fixed; 
@@ -20,7 +20,8 @@
 }
 
 .wrapper {
-    margin-top: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%; 
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid;
     padding-left: 1%;;

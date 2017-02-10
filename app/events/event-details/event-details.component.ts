@@ -16,11 +16,14 @@ export class EventDetailsComponent {
                 private _router: Router,
                 private _eventService: EventService) { 
     }
-
+    
     ngOnInit(): void {
         this.event = this._eventService.getEvent(+this._route.snapshot.params['id']);
     }
-    
-   
-  
+    onBack(): void {
+        this._router.navigate(['/events']);
+    }
 }
+   
+    
+  

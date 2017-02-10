@@ -156,7 +156,7 @@ const EVENTS = [
         date: '5/4/2037',
         time: '9:00 am',
         price: 759.00,
-        imageUrl: '/app/assets/images/ng-conf.png',
+        imageUrl: '/app/assets/images/ng-nl.png',
         location: {
             address: 'The Palatial America Hotel',
             city: 'Salt Lake City',
