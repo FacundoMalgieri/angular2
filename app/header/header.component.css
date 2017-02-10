@@ -1,0 +1,49 @@
+#header-comp {
+    min-height: 400px; 
+    height: 100%; 
+    background-color: #CCC; 
+    background: url(./app/assets/images/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    top:0%;
+    max-height: 100%;
+    border-bottom: 1px #999999 solid;
+}
+
+#tit { 
+    font-weight: 900;
+    font-size: 70px; 
+    line-height: 100%;
+    color: #FFFFFF !important;
+}
+
+.wrapper {
+    margin-top: 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid;
+    padding-left: 1%;;
+}
+
+#searchForm { 
+    width: 15em; 
+    margin-left: 5%; 
+    padding: 1%; 
+}
+
+#search {
+    top:3%; 
+    margin-left: 5%; 
+    font-weight: 900;
+    padding-left: 1.5%;
+}
+.showMe { 
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in;
+}
+.showHim:hover .showMe{
+    visibility: visible;
+    opacity: 1;
+}

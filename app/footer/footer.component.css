@@ -1,0 +1,20 @@
+#developedBy {
+    text-align: center;
+    margin-top: 4%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+#footer {
+    min-height: 150px; 
+    height: 100%; 
+    background-color: #CCC; 
+    background: url(./app/assets/images/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    max-height: 100%;
+    border-top: 1px #999999 solid;
+}
+
