@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
     styleUrls: [ 'navbar.component.css' ] 
 })
 
-export class NavbarComponent { }
+export class NavbarComponent {
+    constructor(private _router: Router) { }
+    home(): void {
+        this._router.navigate(['/home']);
+    }
+    
+    events(): void {
+        this._router.navigate(['/events']);
+    }
+ }

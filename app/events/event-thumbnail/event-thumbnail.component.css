@@ -1,6 +1,6 @@
 h2 { margin-top: 2%; text-transform: capitalize; }
 .pad-class { margin-left: 10px; }
-.well div { color: #bbb; text-align: left; }
+.well div { color: #bbb; text-align: left; position: relative; }
 .thumbnail { height: 230px; padding: 3%; }
 .red { color: red !important; }
 .yellow { color: yellow !important; }

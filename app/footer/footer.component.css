@@ -1,20 +1,23 @@
-#developedBy {
-    text-align: center;
-    margin-top: 4%;
-    background-color: rgba(0, 0, 0, 0.5);
-
-}
-
 #footer {
-    min-height: 150px; 
-    height: 100%; 
-    background-color: #CCC; 
-    background: url(./app/assets/images/bg.jpg) no-repeat 55% 18% fixed; 
+    background: url(./app/assets/images/bg.jpg) no-repeat 55% 18% fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    max-height: 100%;
     border-top: 1px #999999 solid;
+    text-align: center;
+    bottom: 0;
+    overflow: hidden; 
+}
+
+.bg {
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.5) no-repeat;  
+    color: #fff;
+}
+
+span {
+    font-size: 30px;
+    padding: 1%;
 }
 

@@ -1,30 +1,27 @@
-import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnail.component';
-import { EventDetailsComponent } from './events/event-details/event-details.component';
-import { EventsListComponent } from './events/events-list.component';
-import { EventService } from './events/shared/event.service';
+import { NgModule } from '@angular/core';
+import { SharedModule } from './shared.module';
+import { EventsModule } from './events/events.module';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app.routing.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './nav/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
 @NgModule({
     declarations: [ 
-        AppComponent,
-        EventsListComponent,
-        EventThumbnailComponent,
-        NavbarComponent,
-        HeaderComponent,
-        FooterComponent,
-        EventDetailsComponent
+        AppComponent
      ],
-     imports: [ 
+     imports: [
+        SharedModule,
+        EventsModule, 
         BrowserModule,
         AppRoutingModule
     ],
-    providers : [ EventService ],
+    exports: [
+        NavbarComponent    
+    ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule {

@@ -1,11 +1,12 @@
-import { EventService } from './../shared/event.service';
+import { EventService } from './../event-services/event.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription'
 
 @Component({
-    templateUrl: '/app/events/event-details/event-details.component.html',
-    styleUrls: [ '/app/events/event-details/event-details.component.css' ]
+    moduleId: module.id,
+    templateUrl: 'event-details.component.html',
+    styleUrls: [ 'event-details.component.css' ]
 }) 
 
 export class EventDetailsComponent {

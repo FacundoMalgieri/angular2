@@ -1,4 +1,3 @@
-import { Router } from '@angular/router';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -23,11 +22,4 @@ export class EventThumbnailComponent {
         else if(normal) return { yellow: normal, bold: normal } ;
         else return { red: late, bold: late };
     }
-
-   
-/*  @Output() eventClick = new EventEmitter();
-    handleClickMe() {
-        this.eventClick.emit(this.event.name);
-    }
-*/
 }
