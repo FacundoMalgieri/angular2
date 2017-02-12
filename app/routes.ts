@@ -8,6 +8,6 @@ export const appRoutes: Routes = [
     { path: 'home', component: HeaderComponent },
     { path: 'events', component: EventsListComponent },
     { path: 'events/:id', component: EventDetailsComponent },
-    { path: '**', redirectTo: '/events', pathMatch: 'full' }
+    { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ]
 

@@ -33,8 +33,14 @@ button {
   background-color: #f89406;
 }
 
+html {
+  background-color: #000 !important;
+  font-size: 14px;
+  color: #fff !important;
+}
+
 body {
-  background-color: #000;
+  background-color: #000 !important;  
 }
 
 .align {
