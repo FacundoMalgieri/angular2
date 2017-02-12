@@ -2,8 +2,8 @@ import { EventService } from './shared/event.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector:'app/events/events-list',
-    templateUrl: 'app/events/events-list.component.html'  
+    moduleId: module.id,
+    templateUrl: 'events-list.component.html'  
 })
 
 export class EventsListComponent { 

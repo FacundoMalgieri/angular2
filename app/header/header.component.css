@@ -1,22 +1,32 @@
 #header-comp {
-    min-height: 300px; 
+    min-height: 700px; 
     height: 100%; 
-    background-color: #CCC; 
-    background: url(./app/assets/images/bg.jpg) no-repeat center center fixed; 
+    background: url(./app/assets/images/bg.jpg) no-repeat  55% 18% fixed ; 
     -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -moz-background-size:    cover;
+    -o-background-size:      cover;
+    background-size:         cover;
     top:0%;
     max-height: 100%;
     border-bottom: 1px #999999 solid;
 }
 
 #tit { 
+    position: absolute;
+    top: 7000%;
+    left: 10%;
+    right: 15%;
     font-weight: 900;
     font-size: 70px; 
     line-height: 100%;
-    color: #FFFFFF !important;
+    color: #000 !important;
+    text-shadow: 0px 1px, #999999 1px 0px, #999999 1px 1px, 1px 2px, 2px 1px, 2px 2px, 2px 3px, 3px 2px, 3px 3px;
+    letter-spacing:5px;
+}
+#subTit {
+    font-weight: 200;
+    font-size: 50px; 
+    line-height: 100%;
 }
 
 .wrapper {
@@ -26,25 +36,47 @@
     border: 1px solid;
     padding-left: 1%;;
 }
-
-#searchForm { 
-    width: 15em; 
-    margin-left: 5%; 
-    padding: 1%; 
+#searchForm {
+    position: fixed;
+    top: 50%;
+    right: 2%;
+    max-width: 200px;
 }
 
+.form-group {
+    position: relative;
+}
 #search {
-    top:3%; 
-    margin-left: 5%; 
+    color: #000 !important;
     font-weight: 900;
-    padding-left: 1.5%;
+    width: auto;
 }
+.searchBtn {
+    position: relative;
+    right: -48%;
+}
+.glyphicon {
+    right: -72%;
+    position: relative;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-size: 40px;
+    color: black;
+    font-weight: 900;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
 .showMe { 
+    max-width: 150px;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s ease-in;
 }
-.showHim:hover .showMe{
+.showHim:hover .showMe {
     visibility: visible;
     opacity: 1;
 }

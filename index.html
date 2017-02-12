@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/ng2f-bootstrap/dist/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="http://tawian.io/text-spinners/spinners.css">
 
     <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
@@ -23,7 +24,11 @@
   </head>
   
   <body>
-    <events-app>Loading...</events-app>
+    <app>
+        <div class="align">
+            Loading...<span class="loading time font-up"></span>
+        </div>
+    </app>
   </body>
 
   <script>

@@ -2,9 +2,10 @@ import { Router } from '@angular/router';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
+    moduleId: module.id,
     selector: 'event-thumbnail',
-    templateUrl: 'app/events/event-thumbnail.component.html',
-    styleUrls: [ 'app/events/event-thumbnail.component.css' ] 
+    templateUrl: 'event-thumbnail.component.html',
+    styleUrls: [ 'event-thumbnail.component.css' ] 
 })
 
 export class EventThumbnailComponent { 

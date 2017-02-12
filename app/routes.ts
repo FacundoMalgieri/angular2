@@ -1,11 +1,13 @@
 import { Routes } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
 import { EventsListComponent } from './events/events-list.component';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
 
 export const appRoutes: Routes = [
-    { path: '', redirectTo: '/events', pathMatch: 'full' },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home', component: HeaderComponent },
     { path: 'events', component: EventsListComponent },
     { path: 'events/:id', component: EventDetailsComponent },
-    { path: '**', redirectTo: '/events', pathMatch: 'full' },
+    { path: '**', redirectTo: '/events', pathMatch: 'full' }
 ]
 
