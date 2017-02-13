@@ -46,14 +46,24 @@ body {
     background-color: #dddddd;  
     color: #000 !important;
     height: 100%;
-    
-    
 }
 
 footer {
   overflow: hidden;
 }
 
+#goTop {
+  color: #000 !important;
+  cursor: pointer;
+  position: relative;
+  left: 95%;
+}
+
+@media screen and (max-width: 1001px) {
+    #goTop {
+      left: 90%;
+    }
+}
 
 .align {
   text-align: center;

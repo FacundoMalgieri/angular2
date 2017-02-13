@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     moduleId: module.id,
     selector: 'nav-bar',
     templateUrl: 'navbar.component.html',
-    styleUrls: [ 'navbar.component.css' ] 
+    styleUrls: ['navbar.component.css']
 })
 
 export class NavbarComponent {
@@ -13,13 +13,18 @@ export class NavbarComponent {
     home(): void {
         this._router.navigate(['/home']);
     }
-    
+
     events(): void {
         this._router.navigate(['/events']);
     }
 
-    bio(): void {
-        this._router.navigate(['/home/bio']);
-        
+    goTo(location: string): void {
+        window.location.hash = location;
     }
- }
+
+    bio(): void {
+        this._router.navigate(['/home/bio']).then(() => {
+            this.goTo('#intro');
+        });; 
+    }
+}

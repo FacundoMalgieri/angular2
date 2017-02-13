@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
         <footer-comp></footer-comp>
     `
 })
-export class AppComponent {
-}
+export class AppComponent { }
