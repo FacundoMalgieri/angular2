@@ -1,26 +1,23 @@
+import { AppRoutes } from './app.routes';
+import { HomeModule } from './home/home.module';
 import { NgModule } from '@angular/core';
 import { SharedModule } from './shared.module';
 import { EventsModule } from './events/events.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app.routing.module';
-
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { NavbarComponent } from './nav/navbar.component';
-import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
     declarations: [ 
         AppComponent
      ],
      imports: [
+        HomeModule,
         SharedModule,
         EventsModule, 
         BrowserModule,
-        AppRoutingModule
+        AppRoutes
     ],
     exports: [
-        NavbarComponent    
     ],
     bootstrap: [ AppComponent ]
 })

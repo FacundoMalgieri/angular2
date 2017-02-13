@@ -17,4 +17,9 @@ export class NavbarComponent {
     events(): void {
         this._router.navigate(['/events']);
     }
+
+    bio(): void {
+        this._router.navigate(['/home/bio']);
+        
+    }
  }

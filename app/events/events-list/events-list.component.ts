@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     moduleId: module.id,
-    templateUrl: 'events-list.component.html'  
+    templateUrl: 'events-list.component.html',
+    styleUrls: ['events-list.component.css']  
 })
 
 export class EventsListComponent { 

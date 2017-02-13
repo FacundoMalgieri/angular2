@@ -1,0 +1,49 @@
+
+/* SEARCH */
+#searchForm {
+    position: fixed;
+    top: 50%;
+    right: 2%;
+    max-width: 200px;
+}
+
+.form-group {
+    position: relative;
+}
+
+#search {
+    color: #000 !important;
+    font-weight: 900;
+    width: auto;
+}
+
+.searchBtn {
+    position: relative;
+    right: -48%;
+}
+
+.glyphicon {
+    right: -72%;
+    position: relative;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-size: 40px;
+    color: black;
+    font-weight: 900;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.showMe { 
+    max-width: 150px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in;
+}
+
+.showHim:hover .showMe {
+    visibility: visible;
+    opacity: 1;
+}
