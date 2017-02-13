@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 
 export class EventsListComponent { 
     events: any[];
+    listFilter: string;
+
     constructor(private eventService : EventService) { }
 
     ngOnInit() {

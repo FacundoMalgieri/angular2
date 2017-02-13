@@ -1,8 +1,27 @@
-h2 { margin-top: 2%; text-transform: capitalize; }
+h2 { 
+    margin-top: 2%; 
+    text-transform: capitalize; 
+}
+
 .pad-class { margin-left: 10px; }
-.well div { color: #bbb; text-align: left; position: relative; }
-.thumbnail { height: 230px; padding: 3%; }
+
+.well div { 
+    text-align: left; 
+    position: relative;
+ 
+}
+
+.thumbnail { 
+    height: 230px; 
+    padding: 3%; 
+    background-color: rgba(255, 255, 255, 0.9);
+       border: 1px black solid; 
+}
+
 .red { color: red !important; }
+
 .yellow { color: yellow !important; }
+
 .green { color: green !important; }
+
 .bold { font-weight: bold; }

@@ -1,3 +1,4 @@
+import { FilterPipe } from './events-list/filter.pipe';
 import { EventRoutes } from './event.routes';
 import { SharedModule } from './../shared.module';
 import { AppComponent } from './../app.component';
@@ -13,6 +14,7 @@ import { NgModule } from '@angular/core';
         EventsListComponent,
         EventThumbnailComponent,
         EventDetailsComponent,
+        FilterPipe
     ],
     imports: [
         SharedModule,

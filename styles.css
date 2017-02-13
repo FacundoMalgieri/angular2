@@ -38,25 +38,22 @@ html {
   color: #000 !important;
   padding: 0;
   margin: 0;
-  overflow-y: scroll;
+  height: 100%;
 }
 .row{ margin: 0; }
 
 body {
-     background-color: #dddddd !important;  
+    background-color: #dddddd;  
     color: #000 !important;
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    
+    
 }
 
 footer {
   overflow: hidden;
 }
 
-.content {
-  flex:1;
-}
 
 .align {
   text-align: center;

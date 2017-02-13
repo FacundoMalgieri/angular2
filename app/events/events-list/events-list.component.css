@@ -1,5 +1,17 @@
 
 /* SEARCH */
+#wrapper {
+     background: url(./app/assets/images/ng-conf.png) no-repeat 50% 50% fixed !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto;
+}
+
 #searchForm {
     position: fixed;
     top: 50%;

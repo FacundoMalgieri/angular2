@@ -3,7 +3,34 @@
 }
 
 .container {
-    padding-right: 20px;
-    padding-right: 20px;
+    padding: 5%;
+    border: 1px solid;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 20px;
+}
+    
+#wrapper {
+    background: url(./app/assets/images/angularconnect-shield.png) no-repeat 50% 50% fixed !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    padding: 2%;
+    padding-top: 7%;
+    margin: 0 auto;
 }
 
+@media screen and (max-width: 600px) {
+   #wrapper {
+       padding-top: 40%;
+   }
+}
+
+@media screen and (min-width: 601px) and (max-width: 991px) {
+   #wrapper {
+       padding-top: 15%;
+   }
+}
