@@ -13,7 +13,12 @@
 .bg {
     padding: 1.5rem;
     background: rgba(0, 0, 0, 0.5) no-repeat;  
-    color: #fff;
+    color: #ccc !important;    
+}
+
+a {
+    color: #ccc !important;
+    text-decoration: none;    
 }
 
 span {
