@@ -39,10 +39,6 @@
             $(this).addClass('oppenned');
             event.stopPropagation();
         })
-        $(document).delegate('.cls', 'click', function(event){
-            $('.open').addClass('oppenned');
-            event.stopPropagation();
-        })
         $(document).delegate('body', 'click', function(event) {
             $('.open').removeClass('oppenned');
         })
