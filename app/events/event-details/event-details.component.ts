@@ -21,6 +21,7 @@ export class EventDetailsComponent {
     ngOnInit(): void {
         this.event = this._eventService.getEvent(+this._route.snapshot.params['id']);
     }
+    
     onBack(): void {
         this._router.navigate(['/events']);
     }

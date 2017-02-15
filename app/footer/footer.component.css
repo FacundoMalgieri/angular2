@@ -28,3 +28,20 @@ span {
     padding: 1%;
 }
 
+#goTop {
+    position: fixed;
+    right: 2.5%;
+    bottom: 25%;
+}
+
+@media screen and (min-width: 351px) and (max-width: 601px) {
+    #tit {
+        right: 4%;;
+    }
+}
+
+@media screen and (min-width: 350px) {
+    #tit {
+        right: 6%;;
+    }
+}

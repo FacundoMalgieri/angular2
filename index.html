@@ -39,6 +39,10 @@
             $(this).addClass('oppenned');
             event.stopPropagation();
         })
+        $(document).delegate('.cls', 'click', function(event){
+            $('.open').addClass('oppenned');
+            event.stopPropagation();
+        })
         $(document).delegate('body', 'click', function(event) {
             $('.open').removeClass('oppenned');
         })
@@ -52,8 +56,5 @@
         window.scrollTo(0, -500);
     }
   
-</script>
-
-
-
+    </script>
 </html>

@@ -25,6 +25,6 @@ export class NavbarComponent {
     bio(): void {
         this._router.navigate(['/home/bio']).then(() => {
             this.goTo('#intro');
-        });; 
+        }); 
     }
 }

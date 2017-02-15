@@ -3,6 +3,7 @@ import { PipeTransform, Pipe } from '@angular/core';
 @Pipe({
     name: 'FilterPipe'
 })
+
 export class FilterPipe implements PipeTransform {
     transform(value: any[], filterBy: string): any[] { 
         filterBy = filterBy ? filterBy.toLocaleLowerCase() : null;
