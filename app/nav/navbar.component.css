@@ -1,15 +1,5 @@
 .nav.navbar-nav { font-size: 15px; }
 
-html {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%; 
-}
-
-*, *:after, *:before {
-  box-sizing: inherit;
-}
-
 a:hover {
   color: #000;
   text-decoration: none;
@@ -17,7 +7,6 @@ a:hover {
 
 body {
   width: 100%;
-  height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   color: #000 !important;
   padding: 60px;
@@ -29,6 +18,28 @@ h1 {
   padding: 40px 0;
 }
 
+header {
+  position: fixed;
+  height: 40px;
+  top: 0;
+  transition: top 0.2s ease-in-out;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.nav-up {
+  top: -40px;
+}
+/*
+html {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%; 
+}
+
+*, *:after, *:before {
+  box-sizing: inherit;
+}
 .open {
   z-index: 1;
   position: fixed;
@@ -230,3 +241,4 @@ h1 {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
+*/
