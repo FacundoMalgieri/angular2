@@ -1,7 +1,6 @@
-
 /* SEARCH */
 #wrapper {
-     background: url(./app/assets/images/ng-conf.png) no-repeat 50% 50% fixed !important;
+    background:#ccc !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -15,7 +14,7 @@
 #searchForm {
     position: fixed;
     top: 50%;
-    right: 2%;
+    right: 3%;
     max-width: 200px;
 }
 
@@ -85,3 +84,5 @@
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    color:    #000;
 }
+
+.container { padding-top:4%; }

@@ -9,7 +9,9 @@ import { Component } from '@angular/core';
 })
 
 export class NavbarComponent {
+
     constructor(private _router: Router) { }
+     
     home(): void {
         this._router.navigate(['/home']);
     }
