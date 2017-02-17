@@ -1,13 +1,7 @@
 /* SEARCH */
 #wrapper {
-    background: url(./app/assets/images/bg.jpg) no-repeat  55% 18% fixed ; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
     min-height: 100%;
     height: auto !important;
-    height: 100%;
     margin: 0 auto;
 }
 
