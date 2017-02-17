@@ -15,7 +15,6 @@
     background: rgba(0, 0, 0, 0.5) no-repeat;  
     color: #ccc !important;   
     min-height: 155px;
- 
 }
 
 a {
@@ -32,6 +31,7 @@ span {
     position: fixed;
     right: 2.5%;
     bottom: 25%;
+
 }
 
 @media screen and (min-width: 351px) and (max-width: 601px) {

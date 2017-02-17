@@ -5,7 +5,7 @@
 }
 
 a {
-  font-weight: bold;
+  font-weight: 900;
   text-transform: uppercase;
   color: #000000 !important;
   text-shadow:#bbb 0px 1px, #bbb 1px 0px, #bbb 1px 1px, #bbb 1px 2px, #bbb 2px 1px;

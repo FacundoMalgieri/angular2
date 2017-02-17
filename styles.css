@@ -42,8 +42,17 @@ html {
 }
 .row{ margin: 0; }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 body {
-    background-color: #dddddd;  
+    background: url(./app/assets/images/bg.jpg) no-repeat  55% 18% fixed ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     color: #000 !important;
     height: 100%;
 }
@@ -60,16 +69,22 @@ footer {
   left: 95%;
 }
 
+
+.align {
+  text-align: left;
+  position: relative;
+  top: 150px;
+  left: 25%;
+}
+
+
 @media screen and (max-width: 1001px) {
     #goTop {
       left: 90%;
     }
-}
-
-.align {
-  text-align: center;
-  position: relative;
-  top: 100px;
+    .align {
+      left: 10%;
+    }
 }
 
 .font-up {

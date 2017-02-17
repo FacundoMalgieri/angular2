@@ -10,17 +10,12 @@
         </div>
     </div>
     <div class="container">
-        <h1>Upcoming Angular 2 Events</h1>
-        <div class='row'>
-            <div class='col-md-6'>
-                <h3 class="alignLeft">Filtered by: {{listFilter}} </h3>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-md-6" *ngFor="let event of events | FilterPipe: listFilter">
-                <event-thumbnail [event]="event"></event-thumbnail>
-            </div>
+        <h1>Examples: Angular 2</h1>
+        <h4>This section is dedicated to show some AngularJS 2 property binding and routing examples. <br> Everything is inside a component, inside a module, it's really awesome!
+        <br> You can find the source code in my public GitHub <a href="https://github.com/FacundoMalgieri">repository</a>.</h4>
+        <h3 class="alignLeft">Filtered by: {{listFilter}} </h3>
+        <div class="col-md-6" *ngFor="let event of events | FilterPipe: listFilter">
+            <event-thumbnail [event]="event"></event-thumbnail>
         </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 /* SEARCH */
 #wrapper {
-    background:#ccc !important;
+    background: url(./app/assets/images/bg.jpg) no-repeat  55% 18% fixed ; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -86,3 +86,21 @@
 }
 
 .container { padding-top:4%; }
+
+@media all and (max-width:1000px) {
+    .container {
+        padding-top: 6%;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h3, h4 {
+    color: #bbb !important;
+    text-shadow:#000000 0px 1px, #000000 1px 0px, #000000 1px 1px, #000000 1px 2px, #000000 2px 1px,#000000 2px 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+

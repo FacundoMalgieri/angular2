@@ -10,7 +10,7 @@
 }
     
 #wrapper {
-    background: url(./app/assets/images/angularconnect-shield.png) no-repeat 50% 50% fixed !important;
+    background: url(./app/assets/images/bg.jpg) no-repeat  55% 18% fixed ; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
