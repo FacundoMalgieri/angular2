@@ -1,5 +1,7 @@
-.event-image {
-    height: 100px;
+.certificate-image {
+    height: 100%;
+    width: 100%;
+    padding: 2%;
 }
 
 .container {

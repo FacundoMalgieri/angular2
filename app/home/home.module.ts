@@ -1,3 +1,4 @@
+import { ContactComponent } from './contact/contact.component';
 import { BioComponent } from './bio/bio.component';
 import { HomeRoutes } from './home.routes';
 import { SharedModule } from './../shared.module';
@@ -7,6 +8,7 @@ import { NgModule } from '@angular/core';
 @NgModule({
     declarations: [
         HomeComponent,
+        ContactComponent,
         BioComponent
     ],
     imports: [ 

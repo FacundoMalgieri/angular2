@@ -47,8 +47,24 @@ header {
   will-change: transform;
 }
 
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; -webkit-transform: translateY(-100%); }   
+    100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; -webkit-transform: translateY(-100%); }   
+    100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+
+.nav-down {  
+  display: block;
+  -webkit-animation: fadeIn .3s ease-out;
+  animation: fadeIn .3s ease-out;;
+}
+
 .nav-up {
-  top: -10%;
+  display: none;
 }
 /*
 html {

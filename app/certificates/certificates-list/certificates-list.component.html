@@ -1,0 +1,21 @@
+<div id="wrapper">
+    <div class="row">
+        <div class="showHim col-md-12">
+            <form id="searchForm">
+                <i class="glyphicon glyphicon-search"></i>
+                <div class="form-group showMe">
+                    <input type="text" class="form-control" placeholder="Filter" [(ngModel)]='listFilter' [ngModelOptions]="{standalone: true}">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Certificates</h1>
+        <h4>This section is dedicated to show all my certifications using some AngularJS 2 property binding and routing. <br> Everything is inside a component, inside a module. It's really awesome and organized!
+        <br> You can find the source code in my public GitHub <a href="https://github.com/FacundoMalgieri">repository</a>.</h4>
+        <h3 class="alignLeft">Filtered by: {{listFilter}} </h3>
+        <div class="col-md-6" *ngFor="let certificates of certificates | FilterPipe: listFilter">
+            <certificates-thumbnail [certificates]="certificates"></certificates-thumbnail>
+        </div>
+    </div>
+</div>

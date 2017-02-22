@@ -54,7 +54,13 @@ body {
     -o-background-size: cover;
     background-size: cover;
     color: #000 !important;
-    height: 100%;
+    height: 100vh;
+    min-height: 100%;
+   
+    /*-webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform: touch;
+    transform: touch;*/
 }
 
 footer {
@@ -69,14 +75,12 @@ footer {
   left: 95%;
 }
 
-
 .align {
   text-align: left;
   position: relative;
   top: 150px;
   left: 25%;
 }
-
 
 @media screen and (max-width: 1001px) {
     #goTop {

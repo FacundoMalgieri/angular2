@@ -1,3 +1,4 @@
+import { FilterPipe } from './filter.pipe';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './nav/navbar.component';
 import { NgModule } from '@angular/core';
@@ -7,14 +8,16 @@ import { CommonModule } from '@angular/common';
 @NgModule({
     declarations: [
         NavbarComponent,
-        FooterComponent
+        FooterComponent,
+        FilterPipe
     ],
     imports: [ CommonModule ],
     exports: [
         FormsModule,
         CommonModule,
         NavbarComponent,
-        FooterComponent
+        FooterComponent,
+        FilterPipe
     ]
 })
 export class SharedModule { }

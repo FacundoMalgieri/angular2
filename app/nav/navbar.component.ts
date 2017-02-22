@@ -19,6 +19,10 @@ export class NavbarComponent {
     events(): void {
         this._router.navigate(['/events']);
     }
+    
+    certificates(): void {
+        this._router.navigate(['/certificates']);
+    }
 
     goTo(location: string): void {
         window.location.hash = location;
@@ -27,6 +31,12 @@ export class NavbarComponent {
     bio(): void {
         this._router.navigate(['/home/bio']).then(() => {
             this.goTo('#intro');
+        }); 
+    }
+    
+    contact(): void {
+        this._router.navigate(['/home/contact']).then(() => {
+            this.goTo('#contact');
         }); 
     }
 }
