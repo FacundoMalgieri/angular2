@@ -5,6 +5,11 @@
     max-height: 100%;
     width: 100%;
     border-bottom: 1px #999999 solid;
+    -webkit-animation: fadein 3s; 
+    -moz-animation: fadein 3s;
+    -ms-animation: fadein 3s;
+    -o-animation: fadein 3s; 
+    animation: fadein 3s;
 }
 
 .parent {
@@ -17,14 +22,12 @@
     left: 5%;
     right: 10%;
     top: 25%;
-    font-weight: 900;
+    font-weight: 400;
     font-size: 70px; 
     line-height: 121%;
-    color: #bbb !important;
-    text-shadow:#000000 0px 1px, #000000 1px 0px, #000000 1px 1px, #000000 1px 2px, #000000 2px 1px,#000000 2px 2px, #000000 2px 3px, #000000 3px 2px, #000000 3px 3px;
+    color: #fff !important;
+    text-shadow:#000000 0px 1px, #000000 1px 0px, #000000 1px 1px, #000000 1px 2px, #000000 2px 1px;
     letter-spacing:5px;
-    z-index: 1;
-
 }
 
 #subTit {
@@ -36,7 +39,7 @@
 @media screen and (max-width: 600px) {
     #tit {
         font-size: 40px;
-        font-weight: 450px;
+        font-weight: 250px;
         top:70%;
         left: 10%;
     }
@@ -49,12 +52,12 @@
 @media screen and (min-width: 601px) and (max-width: 991px) {
     #tit {
         font-size: 50px;
-        font-weight: 550px;
+        font-weight: 350px;
         top:55%;
         left: 7%;
     }
    #subTit {
-     font-weight: 200;
+     font-weight: 100;
      font-size: 30px;   
     }
 }
@@ -65,4 +68,29 @@
     padding-left: 1%;;
 }
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/*SLIDESHOW*/

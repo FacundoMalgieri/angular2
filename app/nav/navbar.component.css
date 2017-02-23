@@ -5,7 +5,7 @@
 }
 
 a {
-  font-weight: 900;
+  font-weight: 300;
   text-transform: uppercase;
   color: #000000 !important;
   text-shadow:#bbb 0px 1px, #bbb 1px 0px, #bbb 1px 1px, #bbb 1px 2px, #bbb 2px 1px;
@@ -43,8 +43,6 @@ header {
   left: 0;
   width: 100%;
   margin:0;
-  transition: top 0.2s ease-in-out;
-  will-change: transform;
 }
 
 @-webkit-keyframes fadeIn {
@@ -66,6 +64,7 @@ header {
 .nav-up {
   display: none;
 }
+
 /*
 html {
   box-sizing: border-box;

@@ -7,7 +7,7 @@ $(window).scroll(function (event) {
     didScroll = true;
 });
 
-setInterval(function () {
+setInterval(function() {
     if (didScroll) {
         hasScrolled();
         didScroll = false;
@@ -35,7 +35,7 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 
-$(function () {
+$(function() {
     $(document).delegate('#hideMenu', 'click', (function () {
         $('header').toggleClass('nav-down').toggleClass('nav-up');
         if ($('header').hasClass('nav-down')) {
@@ -48,7 +48,7 @@ $(function () {
     }));
 });
 
-$(function () {
+$(function() {
     $(document).delegate('.top', 'click', (function () {
         var target = $(this.hash);
         target = target.length ? target : $('[id=top]');
@@ -61,7 +61,6 @@ $(function () {
         event.stopPropagation()
     }));
 });
-
 
 // function scrollWin() {
 //     window.scrollTo(0, -500);
