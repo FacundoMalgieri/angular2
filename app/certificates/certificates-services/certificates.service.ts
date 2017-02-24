@@ -16,7 +16,7 @@ const CERTIFICATES = [
         id: 1,
         name: 'Superior Programming Technicature',
         imageUrl: '/app/assets/images/utn.jpg',
-        description: 'This is the certificate in process proof of the 2 years carreer I studied at UTN,Universidad Tecnologica Nacional (National Technological University). I had a very good introduction into the software world. <br> I learnt there, C, Java, HTML, PHP and MySQL, I also had Math, English, and other non directly related subjects. I finished with a 7.40 average grade and with a 9 (scale 1 to 10) in my final project.'
+        description: 'This is the certificate in process proof of the 2 years carreer I studied at UTN,Universidad Tecnologica Nacional (National Technological University). I had a very good introduction into the software world. I learnt there, C, Java, HTML, PHP and MySQL, I also had Math, English, and other non directly related subjects. I finished with a 7.40 average grade and with a 9 (scale 1 to 10) in my final project.'
     },
     {
         id: 2,

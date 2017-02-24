@@ -28,7 +28,7 @@
             System.import('app').catch(function (err) { console.error(err); });
         </script>
         <script type="application/ld+json">
-        {
+            {
         "@context": "http://schema.org/",
         "@type": "Person",
         "name": "Facundo Malgieri",
@@ -40,12 +40,44 @@
 </head>
 
 <div class="wrap">
+
     <body>
-         <ul class="cb-slideshow">
-            <li><span>Image 01</span><div><h3>FACUNDO</h3></div></li>
-            <li><span>Image 02</span><div><h3>MALGIERI</h3></div></li>
-            <li><span>Image 03</span><div><h3></h3></div></li>
-           
+        <embed src="/app/assets/images/music.mp3" autostart="true" loop="true" width="2" height="0">
+        </embed>
+        <noembed>
+            <bgsound src="/app/assets/images/music.mp3" loop="infinite">
+        </noembed>
+        <ul class="cb-slideshow">
+            <li><span></span>
+                <div>
+                    <h3>FACUNDO</h3>
+                </div>
+            </li>
+            <li><span></span>
+                <div>
+                    <h3>MALGIERI</h3>
+                </div>
+            </li>
+            <li><span></span>
+                <div>
+                    <h3>WEB DEVELOPER</h3>
+                </div>
+            </li>
+            <li><span></span>
+                <div>
+                    <h3>TEST</h3>
+                </div>
+            </li>
+            <li><span></span>
+                <div>
+                    <h3>AUTOMATION</h3>
+                </div>
+            </li>
+            <li><span></span>
+                <div>
+                    <h3>ENGINEER</h3>
+                </div>
+            </li>
         </ul>
         <app>
             <div class="align">
@@ -56,7 +88,6 @@
     </body>
 </div>
 <script>
- 
     // var bg = $("body");
     // function resizeBackground() {
     //     bg.height($(window).height() + 60);
