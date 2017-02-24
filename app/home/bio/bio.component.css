@@ -7,17 +7,21 @@
     word-spacing: -1.0px;
     line-height: 150%;
     background: rgba(0, 0, 0, 0.6);
-  text-shadow:#000 0px 1px, #000 1px 0px, #000 1px 1px, #000 1px 2px, #000 2px 1px;
-  font-weight: 300;
+    text-shadow:#000 0px 1px, #000 1px 0px, #000 1px 1px, #000 1px 2px, #000 2px 1px;
+    font-weight: 300;
     color: #fff;
 }
 
 #divider {
-    border-right: 1px #000 solid;
+    border-right: 1px #999999 solid;
 }
 
 .col-md-6 {
     padding: 1%;
+}
+
+hr {
+    border-top:1px solid #999999 !important;
 }
 
 @media all and (max-width: 991px) { #divider { border-right: none; } }

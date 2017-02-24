@@ -191,7 +191,7 @@ h3 {
     animation-delay: 6s;
 }
 .cb-slideshow li:nth-child(3) span { 
-    background: url(./app/assets/images/3.jpg) no-repeat  55% 25%;
+    background: url(./app/assets/images/bg.jpg) no-repeat  55% 25%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

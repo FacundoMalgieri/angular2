@@ -43,6 +43,7 @@ header {
   left: 0;
   width: 100%;
   margin:0;
+  border-bottom: 1px #999999 solid;
 }
 
 @-webkit-keyframes fadeIn {
