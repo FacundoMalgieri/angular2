@@ -3,12 +3,13 @@
         <div class="row">
             <h2>{{certificate?.name}} </h2>
         </div>
+        <a class="btn btn-default pull-right" style="margin:2%;" (click)='onBack()'>
+                <i class="glyphicon glyphicon-chevron-left"></i> Back
+            </a>
         <div class="row">
             <div><strong>Description:</strong> {{certificate?.description}}</div>
             <img [src]="certificate?.imageUrl" [alt]="certificate?.name" class="certificate-image">
-            <a class="btn btn-default pull-right" style="margin:2%;" (click)='onBack()'>
-                <i class="glyphicon glyphicon-chevron-left"></i> Back
-            </a>
+            
         </div>
     </div>
 </div>

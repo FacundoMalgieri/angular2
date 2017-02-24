@@ -20,6 +20,16 @@
     padding: 1%;
 }
 
+a { 
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+a:hover {
+    font-size: 20px;
+}
+
+
 hr {
     border-top:1px solid #999999 !important;
 }

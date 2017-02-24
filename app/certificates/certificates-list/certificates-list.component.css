@@ -79,13 +79,8 @@
    color:    #000;
 }
 
-.container { padding-top:4%; }
+.container { padding-top:8%; }
 
-@media all and (max-width:1000px) {
-    .container {
-        padding-top: 6%;
-    }
-}
 
 a {
     text-decoration: none;
@@ -96,5 +91,40 @@ h1, h3, h4 {
     text-shadow:#000000 0px 1px, #000000 1px 0px, #000000 1px 1px, #000000 1px 2px, #000000 2px 1px;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.thumbnail { 
+    margin: 15px;
+    padding-bottom: 3%; 
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px #999999 solid; 
+}
+
+@media all and (max-width:1200px) {
+    .container {
+        padding-top: 6%;
+    }
+    .thumbnail {
+        margin-top: 10%;
+    }
+}
+
+@media all and (max-width: 699px) {
+    .thumbnail {
+        margin-top: 15%;
+    }
+}
+
+
+@media all and (max-width: 500px) {
+    .thumbnail {
+        margin-top: 40%;
+    }
+}
+
+@media all and (max-width: 398px) {
+    .thumbnail {
+        margin-top: 50%;
+    }
 }
 

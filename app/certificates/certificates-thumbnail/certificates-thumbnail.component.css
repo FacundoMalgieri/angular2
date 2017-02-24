@@ -1,6 +1,9 @@
 h2 { 
     margin-top: 1%; 
-    text-transform: capitalize; 
+    text-transform: capitalize;
+    color:  #fff;
+    text-shadow:#000 0px 1px, #000 1px 0px, #000 1px 1px, #000 1px 2px, #000 2px 1px;
+    text-align: center;
 }
 
 .well div { 
@@ -16,8 +19,8 @@ h2 {
 
 .thumbnail { 
     padding: 3%; 
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 1px black solid; 
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px #999999 solid; 
 }
 
 .bold { font-weight: bold; }

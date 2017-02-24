@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+audio {
+  position: relative;
+  width: 200px;
+  margin-top: 2%;
+}
+
 a {
   font-weight: 300;
   text-transform: uppercase;
