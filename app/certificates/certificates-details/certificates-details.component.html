@@ -3,11 +3,14 @@
         <div class="row">
             <h2>{{certificate?.name}} </h2>
         </div>
-        <a class="btn btn-default pull-right" style="margin:2%;" (click)='next()'>
-            <i class="glyphicon glyphicon-chevron-right"></i> Next
+        <a class="btn btn-default pull-right" title="Next" style="margin:2%;" (click)='next()'>
+            <i class="glyphicon glyphicon-chevron-right"></i> 
         </a>
-        <a class="btn btn-default pull-right" style="margin:2%;" (click)='onBack()'>
-            <i class="glyphicon glyphicon-chevron-left"></i> Back
+        <a class="btn btn-default pull-right" title="All" style="margin:2%;" (click)='all()'>
+            <i class="glyphicon glyphicon-th-list"></i> 
+        </a>
+        <a class="btn btn-default pull-right" title="Back" style="margin:2%;" (click)='back()'>
+            <i class="glyphicon glyphicon-chevron-left"></i> 
         </a>
         <div class="row">
             <div>{{certificate?.description}}</div>

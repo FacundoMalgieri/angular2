@@ -165,7 +165,7 @@ h3 {
 }
 
 .cb-slideshow li:nth-child(1) span { 
-    background: url(./app/assets/images/bg.jpg) no-repeat  55% 18%;
+    background: url(./app/assets/images/bg.jpg) no-repeat  55% 18% fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -175,7 +175,7 @@ h3 {
     min-height: 100%; 
 }
 .cb-slideshow li:nth-child(2) span { 
-    background: url(./app/assets/images/2.jpg) no-repeat center center fixed;
+    background: url(./app/assets/images/2.jpg) no-repeat center 60% fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -191,7 +191,7 @@ h3 {
     animation-delay: 6s;
 }
 .cb-slideshow li:nth-child(3) span { 
-    background: url(./app/assets/images/bg.jpg) no-repeat  55% 25%;
+    background: url(./app/assets/images/bg.jpg) no-repeat  55% 25% fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -206,7 +206,7 @@ h3 {
     animation-delay: 12s;
 }
 .cb-slideshow li:nth-child(4) span { 
-        background: url(./app/assets/images/2.jpg) no-repeat center center fixed;
+        background: url(./app/assets/images/2.jpg) no-repeat center 60% fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -222,7 +222,7 @@ h3 {
     animation-delay: 18s; 
 }
 .cb-slideshow li:nth-child(5) span { 
-   background: url(./app/assets/images/bg.jpg) no-repeat  55% 18%;
+   background: url(./app/assets/images/bg.jpg) no-repeat  55% 18% fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -237,7 +237,7 @@ h3 {
     animation-delay: 24s; 
 }
 .cb-slideshow li:nth-child(6) span { 
- background: url(./app/assets/images/2.jpg) no-repeat center center fixed;
+    background: url(./app/assets/images/2.jpg) no-repeat center 60% fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

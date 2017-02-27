@@ -10,8 +10,7 @@ export class CertificatesGuard implements CanActivate {
         let id = +route.url[1].path;
         let exists = !!this.certificatesService.getCertificate(id);
         if(isNaN(id) || id < 1 || !exists) {
-            alert('Invalid ID');
-            this._router.navigate(['/certificates']);
+            this._router.navigate(['/certificates/1']);
             return false;
         };
         return true;

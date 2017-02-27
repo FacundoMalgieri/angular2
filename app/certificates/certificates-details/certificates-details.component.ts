@@ -24,10 +24,16 @@ export class CertificatesDetailsComponent {
         })
     }
 
-    onBack(): void {
+    all(): void {
         this._router.navigate(['/certificates']);
     }
 
+    back(): void {
+        let obj = this._certificatesService.getCertificate(+this._route.snapshot.params['id']);
+        let id = obj.id - 1;
+        this._router.navigate(['/certificates/' + id]);
+    }
+    
     next(): void {
         let obj = this._certificatesService.getCertificate(+this._route.snapshot.params['id']);
         let id = obj.id + 1;
