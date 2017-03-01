@@ -2,16 +2,16 @@
     <div class="container">
         <ul>
             <li>
-                <audio controls preload autoplay>
+                <audio controls preload> 
                     <source src="/app/assets/images/music.mp3" type="audio/mpeg">
                     <embed height="50" width="100" src="horse.mp3">
                 </audio>
             </li>
         </ul>
         <ul>
-            <li><a title="Home" (click)="home()">Home</a></li>
-            <li><a title="Certificates" (click)="certificates()">Certificates</a></li>
-            <li><a title="Bio" (click)="bio()">Bio</a></li>
+            <li><a title="Home" (click)="home()" [routerLink]="['/home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+            <li><a title="Certificates" [routerLink]="['/certificates']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Certificates</a></li>
+            <li><a title="Bio" (click)="bio()" [routerLink]="['/home/bio']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Bio</a></li>
             <li id="hideMenu"><a><span id="glyphi" title="Hide Menu" class="glyphicon glyphicon-chevron-up"></span></a></li>
         </ul>
     </div>

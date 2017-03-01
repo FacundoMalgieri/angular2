@@ -1,17 +1,24 @@
+import { ICertificate } from './certificates.model';
 import { Injectable } from '@angular/core';
+import { Subject, Observable } from 'rxjs/RX';
 
 @Injectable()
 export class CertificatesService {
-    getCertificates() {
-        return CERTIFICATES;
+    getCertificates(): Observable<ICertificate[]> {
+        let subject = new Subject<ICertificate[]>();
+        setTimeout(() => {
+            subject.next(CERTIFICATES);
+            subject.complete();
+        },10)
+        return subject;
     }
 
-    getCertificate(id: number) {
+    getCertificate(id: number): ICertificate {
         return CERTIFICATES.find(certificate => certificate.id === id);
     }
 }
 
-const CERTIFICATES = [
+const CERTIFICATES: ICertificate[] = [
     {
         id: 1,
         name: 'Superior Programming Technicature',

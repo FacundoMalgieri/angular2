@@ -1,3 +1,4 @@
+import { ICertificate } from './../certificates-services/certificates.model';
 import { CertificatesService } from './../certificates-services/certificates.service';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -10,7 +11,7 @@ import { Subscription } from 'rxjs/Subscription'
 })
 
 export class CertificatesDetailsComponent {
-    certificate: any;
+    certificate: ICertificate;
     private sub: Subscription;
 
     constructor(private _route: ActivatedRoute,

@@ -1,3 +1,4 @@
+import { ICertificate } from './../certificates-services/certificates.model';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -8,5 +9,5 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class CertificatesThumbnailComponent { 
-    @Input() certificates: any;
+    @Input() certificates: ICertificate;
 }

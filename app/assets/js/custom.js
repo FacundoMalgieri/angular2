@@ -22,14 +22,12 @@ function hasScrolled() {
         $('#goTop').removeClass('hidden');
         $('header').removeClass('nav-down').addClass('nav-up');
         $('#glyphi').addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up');
-
     }
     else {
         if (st + $(window).height() < $(document).height()) {
             $('#goTop').addClass('hidden');
             $('header').removeClass('nav-up').addClass('nav-down');
             $('#glyphi').addClass('glyphicon-chevron-up').removeClass('glyphicon-chevron-down');
-
         }
     }
     lastScrollTop = st;

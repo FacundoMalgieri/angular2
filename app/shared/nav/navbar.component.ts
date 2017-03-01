@@ -1,6 +1,6 @@
-import { AppRoutes } from './../app.routes';
+import { AppRoutes } from './../../app.routes';
 import { Router } from '@angular/router';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     moduleId: module.id,
@@ -10,9 +10,10 @@ import { Component } from '@angular/core';
 })
 
 export class NavbarComponent {
+    private classes: string[] = [];
 
     constructor(private _router: Router) { }
-     
+
     home(): void {
         this._router.navigate(['/home']);
     }
@@ -20,7 +21,11 @@ export class NavbarComponent {
     events(): void {
         this._router.navigate(['/events']);
     }
-    
+
+    profile(): void {
+        this._router.navigate(['/user/profile']);
+    }
+
     certificates(): void {
         this._router.navigate(['/certificates']);
     }
@@ -32,12 +37,12 @@ export class NavbarComponent {
     bio(): void {
         this._router.navigate(['/home/bio']).then(() => {
             this.goTo('#intro');
-        }); 
+        });
     }
-    
+
     contact(): void {
         this._router.navigate(['/home/contact']).then(() => {
             this.goTo('#contact');
-        }); 
+        });
     }
 }

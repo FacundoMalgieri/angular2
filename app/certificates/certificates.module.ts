@@ -1,5 +1,6 @@
+import { CertificatesListResolver } from './certificates-services/certificates-resolver.service';
+import { SharedModule } from './../shared/shared.module';
 import { CertificatesRoutes } from './certificates.routes';
-import { SharedModule } from './../shared.module';
 import { AppComponent } from './../app.component';
 import { CertificatesGuard } from './certificates-services/certificates-guard.service';
 import { CertificatesService } from './certificates-services/certificates.service';
@@ -19,6 +20,7 @@ import { NgModule } from '@angular/core';
         CertificatesRoutes
     ],
     providers: [
+        CertificatesListResolver,
         CertificatesService,
         CertificatesGuard
     ]

@@ -1,17 +1,21 @@
-import { FilterPipe } from './filter.pipe';
+import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './nav/navbar.component';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
+import { NgModule } from '@angular/core';
 
 @NgModule({
     declarations: [
         NavbarComponent,
         FooterComponent,
-        FilterPipe
+        FilterPipe,
     ],
-    imports: [ CommonModule ],
+    imports: [ 
+        CommonModule,
+        RouterModule
+    ],
     exports: [
         FormsModule,
         CommonModule,

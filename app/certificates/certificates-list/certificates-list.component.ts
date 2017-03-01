@@ -1,5 +1,7 @@
 import { CertificatesService } from './../certificates-services/certificates.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { ActivatedRoute } from '@angular/router';
+import { ICertificate } from './../certificates-services/certificates.model';
 
 @Component({
     moduleId: module.id,
@@ -8,12 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class CertificatesListComponent { 
-    certificates: any[];
+    certificates: ICertificate[];
     listFilter: string;
 
-    constructor(private certificatesService : CertificatesService) { }
+    constructor(private certificatesService : CertificatesService,
+                private route: ActivatedRoute) { }
 
     ngOnInit() {
-		this.certificates = this.certificatesService.getCertificates();
+		this.certificates = this.route.snapshot.data['certificates']
     }
 }
