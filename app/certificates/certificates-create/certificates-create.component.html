@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <h1>New Certificate</h1>
+            <form #certificateForm="ngForm" (ngSubmit)="saveCertificate(certificateForm.value)" autocomplete="off" novalidate>
+                <div class="form-group" [ngClass]="{ 'error': certificateForm.controls.name?.invalid && certificateForm.controls.name?.touched}">
+                    <label for="name">Certificate Name:</label>
+                    <em *ngIf="certificateForm.controls.name?.invalid && (certificateForm.controls.name?.touched)">Required</em>
+                    <input (ngModel)="certificateName" name="name" required id="name" type="text" class="form-control" placeholder="Name of your certificate..."
+                    />
+                </div>
+                <div class="form-group" [ngClass]="{ 'error': certificateForm.controls.imageUrl?.invalid && certificateForm.controls.imageUrl?.touched }">
+                    <label for="certificateUrl">Certificate Image URL:</label>
+                    <em *ngIf="certificateForm.controls.imageUrl?.invalid && (certificateForm.controls.imageUrl?.touched)">Required</em>
+                    <input (ngModel)="imageUrl" name="imageUrl" required id="imageUrl" type="text" class="form-control" placeholder="URL of your certificate..."
+                    />
+                </div>
+                <div class="form-group" [ngClass]="{ 'error': certificateForm.controls.description?.invalid && certificateForm.controls.description?.touched }">
+                    <label for="description">Certificate Description:</label>
+                    <em *ngIf="certificateForm.controls.description?.invalid && (certificateForm.controls.description?.touched)">Required</em>
+                    <input (ngModel)="description" name="description" required id="description" type="text" class="form-control" placeholder="Description..."
+                    />
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-default" (click)="cancel()">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>

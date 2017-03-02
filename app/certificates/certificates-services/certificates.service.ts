@@ -16,6 +16,11 @@ export class CertificatesService {
     getCertificate(id: number): ICertificate {
         return CERTIFICATES.find(certificate => certificate.id === id);
     }
+
+    saveCertificate(certificate: any) {
+        certificate.id = 999,
+        CERTIFICATES.push(certificate);
+    }
 }
 
 const CERTIFICATES: ICertificate[] = [

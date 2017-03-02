@@ -9,6 +9,8 @@
 
  em {
      color: red;
+     float: right;
+     font-weight: bold;
  }
 
 h1 { 

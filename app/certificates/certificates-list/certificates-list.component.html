@@ -16,6 +16,7 @@
                 <br> Everything is inside a component, inside a module. It's really awesome and organized!
                 <br> You can find the source code in my public GitHub <a href="https://github.com/FacundoMalgieri">repository</a>.</h4>
             <h3 class="alignLeft">Filtered by: {{listFilter}} </h3>
+            <a [routerLink]="['/certificates/new']"><span class="glyphicon glyphicon-plus"></span></a>
         </div>
 
         <div class="col-md-6" *ngFor="let certificates of certificates | FilterPipe: listFilter">

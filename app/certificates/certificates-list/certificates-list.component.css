@@ -1,4 +1,13 @@
-/* SEARCH */
+* {
+    -webkit-animation: fadeIn .3s ease-out;
+    animation: fadeIn .3s ease-out;;
+}
+
+a { 
+    color: dodgerblue;
+    text-decoration: none;
+}
+
 #wrapper {
     min-height: 100%;
     height: auto !important;
@@ -138,12 +147,3 @@ h1, h3, h4 {
     100% { opacity: 1; -webkit-transform: translateY(0); }
 }
 
-* {
-    -webkit-animation: fadeIn .3s ease-out;
-    animation: fadeIn .3s ease-out;;
-}
-
-a { 
-    color: dodgerblue;
-    text-decoration: none;
-}

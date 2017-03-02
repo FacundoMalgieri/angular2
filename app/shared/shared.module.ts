@@ -1,8 +1,8 @@
-import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './nav/navbar.component';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
 import { NgModule } from '@angular/core';
 
@@ -12,15 +12,16 @@ import { NgModule } from '@angular/core';
         FooterComponent,
         FilterPipe,
     ],
-    imports: [ 
+    imports: [
         CommonModule,
         RouterModule
     ],
     exports: [
-        FormsModule,
-        CommonModule,
-        NavbarComponent,
+        ReactiveFormsModule,
         FooterComponent,
+        NavbarComponent,
+        CommonModule,
+        FormsModule,
         FilterPipe
     ]
 })
