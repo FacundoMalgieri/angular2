@@ -7,6 +7,9 @@
     border-top: 1px #999999 solid;
     text-align: center;
     min-height: 155px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .bg {
@@ -48,4 +51,25 @@ span {
     #tit {
         right: 6%;
     }
+}
+
+@-webkit-keyframes slideIn {
+    0% { opacity: 0; -webkit-transform: translateY(100%); }   
+    100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; -webkit-transform: translateY(100%); }   
+    100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+
+.show {  
+  display: block;
+  -webkit-animation: slideIn .3s ease-in;
+  animation: slideIn .3s ease-in;
+}
+
+#hideFooter {
+    float: right;
+    margin-right: 2%; 
 }

@@ -7,7 +7,7 @@ import { CertificatesGuard } from './certificates-services/certificates-guard.se
 
 export const routes: Routes = [
   { path: 'certificates', component: CertificatesListComponent, resolve: { certificates: CertificatesListResolver } },
-  { path: 'certificates/new', component: CertificatesCreateModule },
+  { path: 'new', component: CertificatesCreateModule },
   {
     path: 'certificates/:id', canActivate: [CertificatesGuard],
     component: CertificatesDetailsComponent

@@ -22,12 +22,14 @@ function hasScrolled() {
         $('#goTop').removeClass('hidden');
         $('header').removeClass('nav-down').addClass('nav-up');
         $('#glyphi').addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up');
+        $('#footer').addClass('hidden').removeClass('show');
     }
     else {
         if (st + $(window).height() < $(document).height()) {
             $('#goTop').addClass('hidden');
             $('header').removeClass('nav-up').addClass('nav-down');
             $('#glyphi').addClass('glyphicon-chevron-up').removeClass('glyphicon-chevron-down');
+            $('#footer').removeClass('hidden').addClass('show');
         }
     }
     lastScrollTop = st;
@@ -42,6 +44,13 @@ $(function() {
         else {
             $('#glyphi').addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up');
         }
+        event.stopPropagation()
+    }));
+});
+
+$(function() {
+    $(document).delegate('#hideFooter', 'click', (function () {
+        $('#footer').addClass('hide').removeClass('show');
         event.stopPropagation()
     }));
 });

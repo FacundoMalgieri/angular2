@@ -28,5 +28,4 @@ import { NgModule } from '@angular/core';
     ]
 })
 
-export class CertificatesModule {
-}
+export class CertificatesModule {}
