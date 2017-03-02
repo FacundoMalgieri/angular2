@@ -1,3 +1,6 @@
+import { SharedModule } from './../../shared/shared.module';
+import { Router } from '@angular/router';
+import { AuthService } from './../services/auth.service';
 import { Component } from '@angular/core'
 
 @Component({
@@ -7,7 +10,15 @@ import { Component } from '@angular/core'
 })
 
 export class LoginComponent {
+    constructor(private auth: AuthService,
+                private _router: Router) {}
+
     login(formValues: any) {
-        console.log(formValues)
+        this.auth.loginUser(formValues.userName, formValues.password);
+        this._router.navigate(['/home']);
+    }
+
+    cancel() {
+         this._router.navigate(['/home']);
     }
 }

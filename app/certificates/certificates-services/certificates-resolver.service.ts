@@ -9,5 +9,4 @@ export class CertificatesListResolver implements Resolve<any> {
     resolve() {
         return this.certificatesService.getCertificates().map(certificates => certificates);
     }
-    
 }

@@ -1,5 +1,6 @@
-import { AppRoutes } from './../../app.routes';
+import { AuthService } from './../../user/services/auth.service';
 import { Router } from '@angular/router';
+import { AppRoutes } from './../../app.routes';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -12,7 +13,8 @@ import { Component, Input } from '@angular/core';
 export class NavbarComponent {
     private classes: string[] = [];
 
-    constructor(private _router: Router) { }
+    constructor(private _router: Router,
+                private auth: AuthService) { }
 
     home(): void {
         this._router.navigate(['/home']);

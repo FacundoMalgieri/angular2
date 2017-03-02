@@ -1,3 +1,4 @@
+import { AuthService } from './user/services/auth.service';
 import { SharedModule } from './shared/shared.module';
 import { UserModule } from './user/user.module';
 import { CertificatesModule } from './certificates/certificates.module';
@@ -20,6 +21,7 @@ import { AppComponent } from './app.component';
         UserModule
     ],
     exports: [],
+    providers: [ AuthService ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }

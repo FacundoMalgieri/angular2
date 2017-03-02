@@ -14,8 +14,7 @@ import { NgModule } from '@angular/core';
         SharedModule,
         UserRoutes 
     ],
-    exports: [
-        
-    ]
+    exports: []
 })
+
 export class UserModule { }

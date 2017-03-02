@@ -12,6 +12,11 @@
             <li><a title="Home" (click)="home()" [routerLink]="['/home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
             <li><a title="Certificates" [routerLink]="['/certificates']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Certificates</a></li>
             <li><a title="Bio" (click)="bio()" [routerLink]="['/home/bio']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Bio</a></li>
+            <li>
+                <a *ngIf="!auth.isLogged()" [routerLink]="['/user/login']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Login</a>
+                <a *ngIf="auth.isLogged()" [routerLink]="['/user/profile']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Welcome {{auth.currentUser.userName}}</a>
+            </li>
+            
             <li id="hideMenu"><a><span id="glyphi" title="Hide Menu" class="glyphicon glyphicon-chevron-up"></span></a></li>
         </ul>
     </div>
