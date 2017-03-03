@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered table-striped ">
+                <thead>
+                    <th>USER</th>
+                    <th>PASSWORD</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of all">
+                        <td>{{user?.username}}</td>
+                        <td>{{user?.password}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

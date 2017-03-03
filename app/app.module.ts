@@ -1,12 +1,13 @@
-import { AuthService } from './user/services/auth.service';
-import { SharedModule } from './shared/shared.module';
-import { UserModule } from './user/user.module';
 import { CertificatesModule } from './certificates/certificates.module';
-import { AppRoutes } from './app.routes';
-import { HomeModule } from './home/home.module';
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
+import { AuthService } from './user/services/auth.service';
+import { HomeModule } from './home/home.module';
+import { UserModule } from './user/user.module';
+import { HttpModule } from '@angular/http'
+import { AppRoutes } from './app.routes';
+import { NgModule } from '@angular/core';
 
 @NgModule({
     declarations: [ 
@@ -18,7 +19,8 @@ import { AppComponent } from './app.component';
         BrowserModule,
         AppRoutes,
         CertificatesModule,
-        UserModule
+        UserModule,
+        HttpModule
     ],
     exports: [],
     providers: [ AuthService ],

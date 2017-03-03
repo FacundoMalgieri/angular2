@@ -7,7 +7,7 @@ $(window).scroll(function (event) {
     didScroll = true;
 });
 
-setInterval(function() {
+setInterval(function () {
     if (didScroll) {
         hasScrolled();
         didScroll = false;
@@ -22,20 +22,38 @@ function hasScrolled() {
         $('#goTop').removeClass('hidden');
         $('header').removeClass('nav-down').addClass('nav-up');
         $('#glyphi').addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up');
-        $('#footer').addClass('hidden').removeClass('show');
+        $('#footer').addClass('hide').removeClass('show');
     }
     else {
         if (st + $(window).height() < $(document).height()) {
             $('#goTop').addClass('hidden');
             $('header').removeClass('nav-up').addClass('nav-down');
             $('#glyphi').addClass('glyphicon-chevron-up').removeClass('glyphicon-chevron-down');
-            $('#footer').removeClass('hidden').addClass('show');
+            $('#footer').removeClass('hide').addClass('show');
         }
     }
     lastScrollTop = st;
 }
 
-$(function() {
+setInterval(function () {
+    var footer = $('#footer');
+    var st = $(this).scrollTop();
+    if (footer.hasClass('hide') && st < 10) { 
+        $('#footer').removeClass('hide').addClass('show');
+    }
+}, 5000);
+
+setInterval(function () {
+    var footer = $('header');
+    var st = $(this).scrollTop();
+    if (footer.hasClass('nav-up') && st < 10) { 
+        $('header').removeClass('nav-up').addClass('nav-down');
+    }
+}, 5000);
+
+
+
+$(function () {
     $(document).delegate('#hideMenu', 'click', (function () {
         $('header').toggleClass('nav-down').toggleClass('nav-up');
         if ($('header').hasClass('nav-down')) {
@@ -48,14 +66,14 @@ $(function() {
     }));
 });
 
-$(function() {
+$(function () {
     $(document).delegate('#hideFooter', 'click', (function () {
         $('#footer').addClass('hide').removeClass('show');
         event.stopPropagation()
     }));
 });
 
-$(function() {
+$(function () {
     $(document).delegate('.top', 'click', (function () {
         var target = $(this.hash);
         target = target.length ? target : $('[id=top]');

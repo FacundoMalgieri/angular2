@@ -1,6 +1,7 @@
 import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
 import { SharedModule } from './../shared/shared.module';
+import { AllComponent } from './all/all.component';
 import { UserRoutes } from './user.routes';
 import { NgModule } from '@angular/core';
 
@@ -8,7 +9,8 @@ import { NgModule } from '@angular/core';
 @NgModule({
     declarations: [
         ProfileComponent,
-        LoginComponent
+        LoginComponent,
+        AllComponent
     ],
     imports: [ 
         SharedModule,
