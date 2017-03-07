@@ -1,25 +1,49 @@
+import { Params } from '@angular/router';
+import { Http, Response } from '@angular/http';
 import { ICertificate } from './certificates.model';
 import { Injectable } from '@angular/core';
 import { Subject, Observable } from 'rxjs/RX';
 
 @Injectable()
 export class CertificatesService {
+    private url: string = '/api/certificates.json';
+
+    constructor(private http: Http) { }
+
     getCertificates(): Observable<ICertificate[]> {
-        let subject = new Subject<ICertificate[]>();
-        setTimeout(() => {
-            subject.next(CERTIFICATES);
-            subject.complete();
-        },10)
-        return subject;
+        return this.http.get(this.url)
+            .map((response: Response) => {
+                return <ICertificate[]>response.json();
+            })
+            .catch(this.handleError);
     }
 
-    getCertificate(id: number): ICertificate {
-        return CERTIFICATES.find(certificate => certificate.id === id);
+    // getCertificate(id: number): Observable<ICertificate> {
+    //     return CERTIFICATES.find(certificate => certificate.id === id);
+    // }
+    getCertificate(id: number): Observable<ICertificate> {
+       return this.http.get(this.url)
+            .map((response: Response) => {
+                var certificate: ICertificate;
+                var mapped = <ICertificate[]>response.json();
+                mapped.forEach((item) => {
+                    if (item.id == id) {
+                        certificate = item;                        
+                    }
+                })
+                return certificate;
+            })
+            .catch(this.handleError);
     }
+ 
 
     saveCertificate(certificate: any) {
         certificate.id = 999,
-        CERTIFICATES.push(certificate);
+            CERTIFICATES.push(certificate);
+    }
+
+    private handleError(error: Response) {
+        return Observable.throw(error.statusText);
     }
 }
 
@@ -40,7 +64,7 @@ const CERTIFICATES: ICertificate[] = [
         id: 3,
         name: 'Node Api, Express and Mongo DB',
         imageUrl: '/app/assets/images/pbp.png',
-        description: 'This course is powered by pluralsight.com, it\'s an advanced course about coding along an API that uses Express as layer over Node and making a CRUD persisting data in MongoDB. It also goes through good practices.' 
+        description: 'This course is powered by pluralsight.com, it\'s an advanced course about coding along an API that uses Express as layer over Node and making a CRUD persisting data in MongoDB. It also goes through good practices.'
     },
     {
         id: 4,

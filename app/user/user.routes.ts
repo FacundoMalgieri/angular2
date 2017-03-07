@@ -1,3 +1,4 @@
+import { UserResolver } from './services/user-resolver.service';
 import { AllComponent } from './all/all.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
@@ -9,7 +10,7 @@ export const routes: Routes = [
         children: [
             { path: 'profile', component: ProfileComponent },
             { path: 'login', component: LoginComponent},
-            { path: 'all', component: AllComponent }
+            { path: 'all', component: AllComponent, resolve: { all: UserResolver } }
         ]
     }
 ]

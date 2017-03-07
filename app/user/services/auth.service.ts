@@ -1,13 +1,13 @@
 import { Http, Response } from '@angular/http'
+import { IUser } from './user.model';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/RX';
-import { IUser } from './user.model';
 
 
 @Injectable()
 export class AuthService {
     currentUser: IUser;
-    private url: string = './../../api/users.json';
+    private url: string = '/api/users.json';
 
     constructor(private http: Http) { }
 

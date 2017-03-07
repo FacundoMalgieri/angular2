@@ -1,3 +1,4 @@
+import { UserResolver } from './services/user-resolver.service';
 import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
 import { SharedModule } from './../shared/shared.module';
@@ -16,6 +17,7 @@ import { NgModule } from '@angular/core';
         SharedModule,
         UserRoutes 
     ],
+    providers: [ UserResolver ],
     exports: []
 })
 

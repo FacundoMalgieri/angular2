@@ -21,25 +21,27 @@ export class CertificatesDetailsComponent {
 
     ngOnInit(): void {
         this._route.params.forEach((params: Params) => {
-            this.certificate = this._certificatesService.getCertificate(+params['id']);
+            this._certificatesService.getCertificate(+params['id'])
+                .subscribe((certificate) => this.certificate = certificate);
         })
+        
     }
 
     all(): void {
         this._router.navigate(['/certificates']);
     }
 
-    back(): void {
-        let obj = this._certificatesService.getCertificate(+this._route.snapshot.params['id']);
-        let id = obj.id - 1;
-        this._router.navigate(['/certificates/' + id]);
-    }
+    // back(): void {
+    //     let obj = this._certificatesService.getCertificate(+this._route.snapshot.params['id']);
+    //     let id = obj.id - 1;
+    //     this._router.navigate(['/certificates/' + id]);
+    // }
     
-    next(): void {
-        let obj = this._certificatesService.getCertificate(+this._route.snapshot.params['id']);
-        let id = obj.id + 1;
-        this._router.navigate(['/certificates/' + id]);
-    }
+    // next(): void {
+    //     let obj = this._certificatesService.getCertificate(+this._route.snapshot.params['id']);
+    //     let id = obj.id + 1;
+    //     this._router.navigate(['/certificates/' + id]);
+    // }
 }
 
 
