@@ -12,6 +12,7 @@ import { Subscription } from 'rxjs/Subscription'
 
 export class CertificatesDetailsComponent {
     certificate: ICertificate;
+    errorMessage: string;
     private sub: Subscription;
 
     constructor(private _route: ActivatedRoute,
@@ -19,29 +20,37 @@ export class CertificatesDetailsComponent {
         private _certificatesService: CertificatesService) {
     }
 
-    ngOnInit(): void {
-        this._route.params.forEach((params: Params) => {
-            this._certificatesService.getCertificate(+params['id'])
-                .subscribe((certificate) => this.certificate = certificate);
-        })
-        
+     ngOnInit(): void {
+        this.sub = this._route.params.subscribe(
+            params => {
+                let id = +params['id'];
+                this.getCertificate(id);
+            }
+        );
+    }
+    
+    getCertificate(id:number) {
+        this._certificatesService.getCertificate(id).subscribe(
+                c => this.certificate = c,
+                error => this.errorMessage = <any>error);
     }
 
     all(): void {
         this._router.navigate(['/certificates']);
     }
 
-    // back(): void {
-    //     let obj = this._certificatesService.getCertificate(+this._route.snapshot.params['id']);
-    //     let id = obj.id - 1;
-    //     this._router.navigate(['/certificates/' + id]);
-    // }
+    back(): void {
+        let currentId = +this._route.snapshot.params['id'];
+        let previousId = currentId - 1;
+        console.log(previousId + ' obj: ' + currentId)
+        this._router.navigate(['/certificates/' + previousId]);
+    }
     
-    // next(): void {
-    //     let obj = this._certificatesService.getCertificate(+this._route.snapshot.params['id']);
-    //     let id = obj.id + 1;
-    //     this._router.navigate(['/certificates/' + id]);
-    // }
+    next(): void {
+        let currentId = +this._route.snapshot.params['id'];
+        let nextId = currentId + 1;
+        this._router.navigate(['/certificates/' + nextId]);
+    }
 }
 
 

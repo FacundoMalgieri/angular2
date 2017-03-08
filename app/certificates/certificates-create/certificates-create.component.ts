@@ -15,8 +15,8 @@ export class CertificatesCreateModule {
         private _router: Router) { }
 
     saveCertificate(formValues: any) {
-        this.certificateService.saveCertificate(formValues);
-        this._router.navigate(['/certificates']);
+        this.certificateService.saveCertificate(formValues)
+            .subscribe(c => this._router.navigate(['/certificates'+c.id]));
     }
 
     cancel() {

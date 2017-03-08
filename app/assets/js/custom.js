@@ -46,7 +46,7 @@ setInterval(function () {
 setInterval(function () {
     var footer = $('header');
     var st = $(this).scrollTop();
-    if (footer.hasClass('nav-up') && st < 10) { 
+    if (footer.hasClass('nav-up')) { 
         $('header').removeClass('nav-up').addClass('nav-down');
     }
 }, 5000);

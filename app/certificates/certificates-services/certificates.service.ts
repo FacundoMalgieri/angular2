@@ -1,5 +1,5 @@
 import { Params } from '@angular/router';
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { ICertificate } from './certificates.model';
 import { Injectable } from '@angular/core';
 import { Subject, Observable } from 'rxjs/RX';
@@ -12,34 +12,22 @@ export class CertificatesService {
 
     getCertificates(): Observable<ICertificate[]> {
         return this.http.get(this.url)
-            .map((response: Response) => {
-                return <ICertificate[]>response.json();
-            })
+            .map((response: Response) => <ICertificate[]>response.json())
             .catch(this.handleError);
     }
 
-    // getCertificate(id: number): Observable<ICertificate> {
-    //     return CERTIFICATES.find(certificate => certificate.id === id);
-    // }
     getCertificate(id: number): Observable<ICertificate> {
-       return this.http.get(this.url)
-            .map((response: Response) => {
-                var certificate: ICertificate;
-                var mapped = <ICertificate[]>response.json();
-                mapped.forEach((item) => {
-                    if (item.id == id) {
-                        certificate = item;                        
-                    }
-                })
-                return certificate;
-            })
-            .catch(this.handleError);
+        return this.getCertificates()
+            .map((certificates: ICertificate[]) =>
+                certificates.find(c => c.id === id))
     }
- 
 
-    saveCertificate(certificate: any) {
-        certificate.id = 999,
-            CERTIFICATES.push(certificate);
+    saveCertificate(certificate: any): Observable<ICertificate> {
+        let headers = new Headers({ 'Content-Type': 'aplication/json' });
+        let options = new RequestOptions({ headers: headers });
+        return this.http.put(this.url, JSON.stringify(certificate), options)
+            .map((res: Response) => { return res.json() })
+            .catch(this.handleError);
     }
 
     private handleError(error: Response) {
@@ -47,60 +35,3 @@ export class CertificatesService {
     }
 }
 
-const CERTIFICATES: ICertificate[] = [
-    {
-        id: 1,
-        name: 'Superior Programming Technicature',
-        imageUrl: '/app/assets/images/utn.jpg',
-        description: 'This is the certificate in process proof of the 2 years carreer I studied at UTN,Universidad Tecnologica Nacional (National Technological University). I had a very good introduction into the software world. I learnt there, C, Java, HTML, PHP and MySQL, I also had Math, English, and other non directly related subjects. I finished with a 7.40 average grade and with a 9 (scale 1 to 10) in my final project.'
-    },
-    {
-        id: 2,
-        name: 'AngularJS 2',
-        imageUrl: '/app/assets/images/ang2.png',
-        description: 'This course is powered by pluralsight.com, it\'s about coding along an Angular 2 app using Typescript. An advanced course with a 5.26hs duration. It goes through all the basic knowledge that you must know about this beautiful framework. (Modules, Components, Services, Routing, One and Two way Data Binding, Custom Pipes and Good Practices) '
-    },
-    {
-        id: 3,
-        name: 'Node Api, Express and Mongo DB',
-        imageUrl: '/app/assets/images/pbp.png',
-        description: 'This course is powered by pluralsight.com, it\'s an advanced course about coding along an API that uses Express as layer over Node and making a CRUD persisting data in MongoDB. It also goes through good practices.'
-    },
-    {
-        id: 4,
-        name: 'CSS',
-        imageUrl: '/app/assets/images/css.png',
-        description: 'This course is powered by pluralsight.com, it\'s about the basics of CSS, a beginners course full of tricks and good practices.'
-    },
-    {
-        id: 5,
-        name: 'Angular JS',
-        imageUrl: '/app/assets/images/angular.png',
-        description: 'This course powered by acamica.com, it\'s about the basics of Angular JS 1, an intermediate course with exams and lots of content to understand the logic and workflow of an app made in this languaje. (Controllers, Directives, Services, Routing, Data Binding and Good Practices)'
-
-    },
-    {
-        id: 6,
-        name: 'Node JS',
-        imageUrl: '/app/assets/images/node.png',
-        description: 'This course powered by acamica.com, it\'s about the basics of  NodeJS, an intermediate course with exams and an introduccion to setting up everything with npm to start a localhost and making a basic API.'
-    },
-    {
-        id: 7,
-        name: 'Mongo Data Base',
-        imageUrl: '/app/assets/images/db.png',
-        description: 'This course powered by acamica.com, it\'s about the basics of MongoDB, an intermediate course with exams where you can learn how to set up Mongo and make a basic CRUD app.'
-    },
-    {
-        id: 8,
-        name: 'Responsive Design',
-        imageUrl: '/app/assets/images/responsive.png',
-        description: 'This course powered by acamica.com, it\'s about how to make a responsive website using css media querys. Its really extense and complex and it also has exams.'
-    },
-    {
-        id: 9,
-        name: 'JavaScript Prototypes',
-        imageUrl: '/app/assets/images/proto.png',
-        description: 'This course powered by acamica.com, it\'s about JavaScript prototypes and diferent ways of working with them. It\'s an intermediate course with exams.'
-    }
-]
