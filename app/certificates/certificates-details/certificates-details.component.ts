@@ -27,12 +27,15 @@ export class CertificatesDetailsComponent {
                 this.getCertificate(id);
             }
         );
+
     }
     
     getCertificate(id:number) {
         this._certificatesService.getCertificate(id).subscribe(
                 c => this.certificate = c,
-                error => this.errorMessage = <any>error);
+                error => this.errorMessage = <any>error,
+                );
+                
     }
 
     all(): void {

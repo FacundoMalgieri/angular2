@@ -22,10 +22,10 @@ export class CertificatesService {
                 certificates.find(c => c.id === id))
     }
 
-    saveCertificate(certificate: any): Observable<ICertificate> {
-        let headers = new Headers({ 'Content-Type': 'aplication/json' });
+    saveCertificate(certificate: any) {
+        let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
-        return this.http.put(this.url, JSON.stringify(certificate), options)
+        return this.http.post(this.url, JSON.stringify(certificate), options)
             .map((res: Response) => { return res.json() })
             .catch(this.handleError);
     }

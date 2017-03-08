@@ -16,11 +16,10 @@ export class CertificatesCreateModule {
 
     saveCertificate(formValues: any) {
         this.certificateService.saveCertificate(formValues)
-            .subscribe(c => this._router.navigate(['/certificates'+c.id]));
+            .subscribe(c => this._router.navigate(['/certificates' + c.id]));
     }
 
     cancel() {
         this._router.navigate(['/home']);
     }
-
 }
