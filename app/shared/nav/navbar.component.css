@@ -5,9 +5,10 @@
 }
 
 audio {
+  float:left;
   position: relative;
-  width: 200px;
-  margin-top: 2%;
+  width: 65px;
+  top: 8px;
 }
 
 li > a.active {
